@@ -1,0 +1,20 @@
+DATA:
+  USE_MOTION: True
+  SIZE: 224
+  TRAIN_JSON_PATH: "data2022/train-tracks_nlpaug.json"
+  EVAL_JSON_PATH: "data2022/val_nlpaug.json"
+  CROP_AREA: 1.6666667 ## new_w = CROP_AREA* old_w
+
+
+MODEL:
+  NAME: "CocaCar"
+  car_idloss: False
+  mo_idloss: False
+  share_idloss: False
+TRAIN:
+  BATCH_SIZE: 64
+
+TEST:
+  QUERY_JSON_PATH: "data2022/test-queries_nlpaug.json"
+  RESTORE_FROM: ""
+
